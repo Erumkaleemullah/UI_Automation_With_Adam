@@ -16,7 +16,7 @@ Expected: “Facebook – log in or sign up”
         WebDriverManager.chromedriver().setup();
         WebDriver driver=new ChromeDriver();
         //Go to https://www.facebook.com
-        driver.manage().window().maximize();
+        driver.manage().window().fullscreen();
         driver.get("https://www.facebook.com");
         // Verify title:
         //Expected: “Facebook – log in or sign up”
@@ -29,6 +29,7 @@ Expected: “Facebook – log in or sign up”
             System.out.println("Failed");
         }
         Thread.sleep(3000);
+        driver.close();
 
 
     }
